@@ -1,3 +1,20 @@
+body {
+    background-color: #F7DC6F; /* bright yellow background */
+    min-height: 100vh; /* make sure body takes up full height */
+    display: flex; /* use flexbox to push footer to bottom */
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* take up all available space */
+}
+
+.footer {
+    background-color: #FF0000; /* bright red footer */
+    color: #FFFFFF; /* white text */
+    padding: 20px;
+    text-align: center;
+}
 .offcanvas-navbar {
     position: fixed;
     top: 0;
