@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <title>The Brickyard About</title>
+    <style>
+        body {
+            background-color: #FFD700;
+        }
+    </style>
+</head>
+
+<body>
+    <Header>
+        <div class="nav-container">
+            <div class="nav navOne">
+                <a href="/index.html" class="active" onclick="togglemenu()">Home</a>
+            </div>
+            <div class="nav navHome">
+                <a href="about.html" onclick="togglemenu()">About Us</a>
+            </div>
+            <div class="nav navProduct">
+                <a href="HTML/products.html" onclick="togglemenu()">Products</a>
+            </div>
+            <div class="nav navCart">
+                <a href="cart.html" onclick="togglemenu()">Cart</a>
+            </div>
+            <div class="nav navContact">
+                <a href="HTML/contact.html" onclick="togglemenu()">Contact Us</a>
+            </div>
+            <div class="nav navAdmin">
+                <a href="admin.html" onclick="togglemenu()">Management</a>
+            </div>
+        </div>
+        <button onclick="togglemenu()" class="navbutton">
+            <span class="bar bar-top"></span><span class="bar bar-middle"></span><span class="bar bar-bottom"></span>
+        </button>
+    </Header>
+    <main>
+        <section class="about">
+            <h1 class="welcome-heading">Welcome to The Brickyard!</h1>
+            <p>We're a team of LEGO enthusiasts dedicated to bringing the joy of building to people of all ages. Our
+                online store offers a wide variety of LEGO sets, from classic favorites to the latest releases.</p>
+            <img loading="lazy" src="https://zenlee-george.github.io/hostedimages/Companystaff.png"
+                alt="The Brickyard team building with LEGO bricks">
+            <h2 class="our-story">Our Story</h2>
+            <p>The Brickyard was founded by a group of friends who grew up with a passion for LEGO. We remember spending
+                hours building and creating, and we want to share that experience with others. Our goal is to provide a
+                fun and easy way to discover new LEGO sets and connect with fellow builders.</p>
+            <h2 class="our-mission">Our Mission</h2>
+            <p>At The Brickyard, we believe that building with LEGO bricks is more than just a hobby - it's a way to
+                develop creativity, problem-solving skills, and imagination. We're committed to providing excellent
+                customer service, fast shipping, and a curated selection of LEGO products that will inspire and delight.
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="The Brickyard Logo">
+            </div>
+            <p>&copy; 2024 The Brickyard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/Scripts/about.js"></script>
+</body>
+
+</html>
