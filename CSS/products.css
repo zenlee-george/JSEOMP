@@ -1,59 +1,80 @@
-.offcanvas-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+body {
+    background-color: #F7DC6F; /* bright yellow background */
+    min-height: 100vh; /* make sure body takes up full height */
+    display: flex; /* use flexbox to push footer to bottom */
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* take up all available space */
+}
+
+.footer {
+    background-color: #FF0000; /* bright red footer */
+    color: #FFFFFF; /* white text */
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
     height: 100vh;
-    background-color: #333;
-    padding: 1em;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .offcanvas-navbar.show {
-    transform: translateX(0);
-  }
-  
-  .navbar-toggler {
-    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #337ab7;
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .navbar-toggler:hover {
-    background-color: #555;
-  }
-  
-  .offcanvas-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: #333;
-    padding: 1em;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .offcanvas-nav.show {
-    transform: translateX(0);
-  }
-  
-  .nav-links {
+}
+
+.features {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.features ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .nav-links li {
+}
+
+.features li {
+    margin-bottom: 10px;
+}
+
+.features li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.testimonials {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.testimonials blockquote {
+    font-size: 18px;
     margin-bottom: 20px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-  }
+    padding: 10px;
+    border-left: 5px solid #337ab7;
+}
+
+.testimonials cite {
+    font-size: 16px;
+    color: #666;
+}

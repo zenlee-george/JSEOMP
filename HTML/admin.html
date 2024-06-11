@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Brickyard - Admin</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/admin.css">
 </head>
 <body>
     <header>
-        <nav class="navbar offcanvas-navbar">
-            <div class="container">
-              <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Brickyard Lego Place</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas-nav">
-                <ul class="nav-links">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="products.html">Products</a></li>
-                  <li><a href="cart.html">Cart</a></li>
-                  <li><a href="admin.html">Admin</a></li>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Users</a>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </nav>
-      
+        </nav>
     </header>
     <main>
         <h1>Admin Dashboard</h1>
@@ -38,6 +45,6 @@
         <p>&copy; 2024 The Brickyard. All rights reserved.</p>
     </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="js/script.js"></script>
+    <script src="/Scripts/admin.js"></script>
 </body>
 </html>
