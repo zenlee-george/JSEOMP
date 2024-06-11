@@ -1,133 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <title>The Brickyard Home</title>
-    <style>
-        body{
-            background-color: #FFD700;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/index.css">
+  <title>The Brickyard Home</title>
+  <style>
+    body {
+      background-color: #FFD700;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-      <div class="logo">
-        <span class="icon"></span>
-            <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="Brickyard Lego Logo">
+  <header>
+    <div class="logo">
+      <span class="icon"></span>
+      <img loading="lazy" src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="Brickyard Lego Logo">
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-background">
+      <img loading="lazy" src="https://zenlee-george.github.io/hostedimages/Legocityscape.jpg" alt="LEGO Cityscape">
+    </div>
+    <div class="hero-content">
+      <h1>Build Your Dreams with The Brickyard</h1>
+      <p>Explore our vast collection of LEGO sets, minifigures, and accessories</p>
+      <button class="btn btn-primary">Start Building Today!</button>
+    </div>
+  </section>
+  <div class="nav-container">
+    <div class="nav navAbout">
+      <a href="index.html" class="active" onclick="togglemenu()">Home</a>
+    </div>
+    <div class="nav navAbout">
+      <a href="/HTML/about.html" onclick="togglemenu()">About Us</a>
+    </div>
+    <div class="nav navProduct">
+      <a href="HTML/products.html" onclick="togglemenu()">Products</a>
+    </div>
+    <div class="nav navCart">
+      <a href="cart.html" onclick="togglemenu()">Cart</a>
+    </div>
+    <div class="nav navContact">
+      <a href="HTML/contact.html" onclick="togglemenu()">Contact Us</a>
+    </div>
+    <div class="nav navAdmin">
+      <a href="admin.html" onclick="togglemenu()">Management</a>
+    </div>
+  </div>
+  <button onclick="togglemenu()" class="navbutton">
+    <span class="bar bar-top"></span><span class="bar bar-middle"></span><span class="bar bar-bottom"></span>
+  </button>
+
+  <section id="newsletter">
+    <div class="container">
+      <h2>Stay Up-to-Date with Our Latest News and Offers!</h2>
+      <form>
+        <input type="email" placeholder="Enter your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p>By subscribing to our newsletter, you'll receive exclusive access to new products, promotions, and LEGO news!
+      </p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="testimonial-heading">
+      <span>Comments</span>
+      <h4>Clients Says</h4>
+    </div>
+    <div class="testimonial-box">
+      <div class="box-top">
+        <div class="profile">
+          <div class="profile-img">
+            <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+          </div>
+          <div class="name-user">
+            <strong>Liam Mendes</strong>
+            <span>@liammendes</span>
+          </div>
         </div>
-    </header>
-    <section class="hero">
-      <div class="hero-background">
-        <img src="https://zenlee-george.github.io/hostedimages/Legocityscape.jpg" alt="LEGO Cityscape">
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
       </div>
-      <div class="hero-content">
-        <h1>Build Your Dreams with The Brickyard</h1>
-        <p>Explore our vast collection of LEGO sets, minifigures, and accessories</p>
-        <button class="btn btn-primary">Start Building Today!</button>
-      </div>
-    </section>
-    <div class="cursor"></div>
-    <div class="nav-container">
-      <div class="nav navOne">
-        <a href="index.html" class="active" onclick="togglemenu()">Home</a>
-      </div>
-      <div class="nav navHome">
-        <a href="" onclick="togglemenu()">About Us</a>
-      </div>
-      <div class="nav navProduct">
-        <a href="HTML/products.html" onclick="togglemenu()">Products</a>
-      </div>
-      <div class="nav navCart">
-        <a href="cart.html" onclick="togglemenu()">Cart</a>
-      </div>
-      <div class="nav navContact">
-        <a href="HTML/contact.html" onclick="togglemenu()">Contact Us</a>
-      </div>
-      <div class="nav navAdmin">
-        <a href="admin.html" onclick="togglemenu()">Management</a>
+      <div class="client-comment">
+        <p>I've been buying LEGO sets from The Brickyard for years and I've never been disappointed. The prices are
+          competitive, the shipping is fast, and the customer service is top-notch. I highly recommend The Brickyard to
+          anyone looking for a great LEGO shopping experience!</p>
       </div>
     </div>
-    <button onclick="togglemenu()" class="navbutton">
-      <span class="bar bar-top"></span><span class="bar bar-middle"></span
-      ><span class="bar bar-bottom"></span>
-    </button>
-
-    <section id="newsletter">
-      <div class="container">
-        <h2>Stay Up-to-Date with Our Latest News and Offers!</h2>
-        <form>
-          <input type="email" placeholder="Enter your email address">
-          <button type="submit">Subscribe</button>
-        </form>
-        <p>By subscribing to our newsletter, you'll receive exclusive access to new products, promotions, and LEGO news!</p>
-      </div>
-    </section>
-
-    <section id="testimonials">
-      <div class="testimonial-heading">
-          <span>Comments</span>
-          <h4>Clients Says</h4>
-      </div>
-      <div class="testimonial-box">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
-            </div>
-            <div class="name-user">
-              <strong>Liam Mendes</strong>
-              <span>@liammendes</span>
-            </div>
+    <div class="testimonial-box">
+      <div class="box-top">
+        <div class="profile">
+          <div class="profile-img">
+            <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
           </div>
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+          <div class="name-user">
+            <strong>Sarah Lee Tarr</strong>
+            <span>@sarahleetarr</span>
           </div>
         </div>
-        <div class="client-comment">
-          <p>I've been buying LEGO sets from The Brickyard for years and I've never been disappointed. The prices are competitive, the shipping is fast, and the customer service is top-notch. I highly recommend The Brickyard to anyone looking for a great LEGO shopping experience!</p>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
         </div>
-      </div>   
-          <div class="testimonial-box">
-            <div class="box-top">
-              <div class="profile">
-                <div class="profile-img">
-                  <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
-                </div>
-                <div class="name-user">
-                  <strong>Sarah Lee Tarr</strong>
-                  <span>@sarahleetarr</span>
-                </div>
-              </div>
-              <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="user-comment">
-              <p>I'm absolutely amazed by the quality of the LEGO sets I've purchased from The Brickyard! The attention to detail and the variety of options available are unmatched. I've never been disappointed with my purchases and I always look forward to receiving my new sets.</p>
-            </div>
-          </div>
-    </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="The Brickyard Logo">
-        </div>
-        <p>&copy; 2024 The Brickyard. All rights reserved.</p>
       </div>
-    </footer>
-<script src='https://kit.fontawesome.com/c8e4d183c2.js'></script>
-<script src="/Scripts/index.js"></script>
+      <div class="user-comment">
+        <p>I'm absolutely amazed by the quality of the LEGO sets I've purchased from The Brickyard! The attention to
+          detail and the variety of options available are unmatched. I've never been disappointed with my purchases and
+          I always look forward to receiving my new sets.</p>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="The Brickyard Logo">
+      </div>
+      <p>&copy; 2024 The Brickyard. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src='https://kit.fontawesome.com/c8e4d183c2.js'></script>
+  <script src="/Scripts/index.js"></script>
 </body>
+
 </html>
