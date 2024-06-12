@@ -1,24 +1,19 @@
-* {
-  font-family: 'LEGothicType', sans-serif;
-}
-
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+
 main {
   flex: 1;
 }
 
-.legothic-type {
-  font-family: 'LEGothicType', sans-serif;
-}
 
 body::-webkit-scrollbar {
   display: none;
 }
+
 
 .nav-container {
   position: fixed;
@@ -33,6 +28,7 @@ body::-webkit-scrollbar {
   transition: 1s ease;
 }
 
+
 .nav {
   font-family: "Montserrat Alternates", sans-serif;
   height: calc(100vh / 6);
@@ -41,6 +37,7 @@ body::-webkit-scrollbar {
   justify-content: flex-end;
   align-items: center;
 }
+
 
 .nav a {
   font-size: clamp(30px, 5vw, 50px);
@@ -52,9 +49,11 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
+
 .nav a:hover {
   color: #ffffff;
 }
+
 
 .nav a::after {
   content: "";
@@ -67,9 +66,11 @@ body::-webkit-scrollbar {
   transition: 0.3s linear;
 }
 
+
 .nav a:hover::after {
   width: 100%;
 }
+
 
 .nav:nth-of-type(1) {
   background: #ee4b2b;
@@ -101,6 +102,7 @@ body::-webkit-scrollbar {
   transform: translateX(-100vw);
   transition: 1s 0.6s ease;
 }
+
 
 .nav:nth-of-type(1).show-menu {
   transform: translateX(0);
@@ -148,10 +150,12 @@ body::-webkit-scrollbar {
   width: 40px;
 }
 
+
 .navbutton.show-menu {
   opacity: 0;
   z-index: -1;
 }
+
 
 .bar {
   background: #000;
@@ -159,29 +163,36 @@ body::-webkit-scrollbar {
   height: 3px;
 }
 
+
 .bar-top {
   width: 35px;
 }
+
 
 .bar-top.move {
   animation: barMove 0.8s linear infinite;
 }
 
+
 .bar-middle {
   width: 30px;
 }
+
 
 .bar-middle.move {
   animation: barMove 0.8s 0.1s ease infinite;
 }
 
+
 .bar-bottom {
   width: 25px;
 }
 
+
 .bar-bottom.move {
   animation: barMove 0.8s 0.2s linear infinite;
 }
+
 
 @keyframes barMove {
   from {
@@ -200,12 +211,14 @@ body::-webkit-scrollbar {
   border-radius: 10px;
 }
 
+
 .image-container img {
   width: 30%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
+
 
 .logo {
   font-size: 24px;
@@ -218,12 +231,14 @@ body::-webkit-scrollbar {
   z-index: 1;
 }
 
+
 .logo span {
   font-family: "Montserrat Alternates", sans-serif;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 
 .logo.icon {
   width: 30px;
@@ -235,6 +250,7 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
+
 .logo.icon::before {
   content: "";
   position: absolute;
@@ -245,7 +261,8 @@ body::-webkit-scrollbar {
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
-}   
+}  
+
 
 .hero {
   height: 100vh;
@@ -256,6 +273,7 @@ body::-webkit-scrollbar {
   color: #000;
   text-shadow: #fff;
 }
+
 
 .hero-background {
   position: absolute;
@@ -268,16 +286,19 @@ body::-webkit-scrollbar {
   opacity: 50%;
 }
 
+
 .hero-background img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+
 .hero-content {
   z-index: 1;
   text-align: center;
 }
+
 
 .hero-content h1 {
   font-family: "Montserrat Alternates", sans-serif;
@@ -286,15 +307,18 @@ body::-webkit-scrollbar {
   margin-bottom: 20px;
 }
 
+
 .hero-content p {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 24px;
   margin-bottom: 40px;
 }
 
+
 .hero-content button {
   margin-top: 20px;
 }
+
 
 .btn-primary {
   font-family: "Montserrat Alternates", sans-serif;
@@ -306,19 +330,22 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
+
 .btn-primary:hover {
   background-color: #ffa07a;
 }
 
 #newsletter {
-  background-color: #f7f7f7;
-  padding: 40px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  width: 60%; 
+  margin: 40px auto; 
+  background-color: #f7f7f7; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #newsletter h2 {
+  text-align: center;
   font-family: "Montserrat Alternates", sans-serif;
   color: #333;
   font-size: 24px;
@@ -361,6 +388,7 @@ body::-webkit-scrollbar {
   margin-bottom: 20px;
 }
 
+
 #testimonials {
   font-family: "Montserrat Alternates", sans-serif;
   display: flex;
@@ -379,6 +407,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 }
+
 
 .testimonial-heading span {
   font-size: 1.3rem;
@@ -403,6 +432,7 @@ body::-webkit-scrollbar {
   margin: 15px;
   cursor: pointer;
 }
+
 
 .profile-img{
   width:50px;
@@ -432,6 +462,7 @@ body::-webkit-scrollbar {
   font-family: "Montserrat Alternates", sans-serif;
 }
 
+
 .name-user span{
   color: #979797;
   font-size: 0.8rem;
@@ -457,16 +488,19 @@ body::-webkit-scrollbar {
 }
 
 
+
+
 /* About */
 .welcome-heading {
-  text-align: center; 
-  font-size: 48px; 
-  font-weight: bold; 
-  color: #000; 
-  margin-bottom: 20px; 
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
   text-shadow: 0 0 10px #fff;
   font-family: "Montserrat Alternates", sans-serif;
 }
+
 
 .welcome-heading {
   color: #000;
@@ -475,29 +509,32 @@ body::-webkit-scrollbar {
   animation: zoom 2s infinite;
 }
 
+
 @keyframes zoom {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.5);
   }
   100% {
     transform: scale(1);
   }
 }
 
+
 .about img {
   display: block;
   margin: 0 auto;
-  max-width: 800px; 
-  max-height: 600px; 
+  max-width: 800px;
+  max-height: 600px;
   object-fit: contain;
   margin-bottom: 20px;
   border: 5px dotted #03A9F4;
   border-radius: 10px;
   animation: fade-in 2s;
 }
+
 
 @keyframes fade-in {
   0% {
@@ -507,7 +544,17 @@ body::-webkit-scrollbar {
     opacity: 1;
   }
 
+
 }
+
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 
 .about p {
   background-color: #f7f7f7;
@@ -516,24 +563,48 @@ body::-webkit-scrollbar {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
-  font-size: 25px; 
+  font-size: 25px;
   font-weight: bold;
   line-height: 1.5;
-  color: #000; 
+  color: #000;
   font-family: "Montserrat Alternates", sans-serif;
 }
+
+
+.image-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+
+.image-container img {
+  width: 27.5%;
+  height: auto;
+  margin: 4%;
+  border: 5px dotted #03A9F4;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 
 .our-story {
+  font-size: 35px;
   font-family: "Montserrat Alternates", sans-serif;
   text-decoration: underline wavy #000;
   text-align: center;
 }
 
+
 .our-mission {
+  font-size: 35px;
   font-family: "Montserrat Alternates", sans-serif;
   text-decoration: underline wavy #000;
   text-align: center;
 }
+
 
 /* Footer */
 .footer-content {
@@ -543,14 +614,17 @@ body::-webkit-scrollbar {
   background-color: #ee4b2b;
 }
 
+
 .footer-logo {
   margin-right: auto;
 }
+
 
 .footer-logo img {
   width: 20%;
   height: 20%;
 }
+
 
 .footer-content > *:not(.footer-logo) {
   margin: 0 auto;
