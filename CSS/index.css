@@ -7,6 +7,7 @@ body {
   height: 100vh;
   box-sizing: border-box;
   position: relative;
+  gap: 50px;
 }
 
 
@@ -607,6 +608,14 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
+.contact-section {
+  margin-bottom: 40px; 
+}
+
+.contact-newsletter {
+  margin-bottom: 20px; 
+}
+
 /* Contact */
 .contact-section {
   font-family: "Montserrat Alternates", sans-serif;
@@ -672,7 +681,42 @@ body::-webkit-scrollbar {
 }
 
 .contact-btn:hover {
+  background-color: #ffa07a;
+}
+
+.contact-send {
   background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+}
+
+.contact-send:hover {
+  background-color: #ffa07a;
+}
+
+.contact-clr {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+}
+
+.contact-clr:hover {
+  background-color: #ffa07a;
 }
 
 .contact-newsletter {
@@ -720,10 +764,78 @@ body::-webkit-scrollbar {
   margin-bottom: 20px;
 }
 
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none; 
+}
+
+.contact-input:invalid:not(:focus) + .error-message {
+  display: block;
+}
+
+#product-grid {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.product-card {
+  flex-basis: 30%;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #0069d9;
+}
+
 /* Footer */
 
 footer {
-  footer {
     position: sticky fixed;
     bottom: 0;
     width: 100%;
@@ -732,7 +844,7 @@ footer {
     text-align: center;
     color: #000;
   }
-}
+
 
 .footer-content {
   display: flex;

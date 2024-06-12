@@ -30,7 +30,7 @@
           <a href="products.html" onclick="togglemenu()">Products</a>
         </div>
         <div class="nav navCart">
-          <a href="cart.html" onclick="togglemenu()">Cart</a>
+          <a href="cart.html" onclick="togglemenu()">Checkout</a>
         </div>
         <div class="nav navContact">
           <a href="contact.html" onclick="togglemenu()">Contact Us</a>
@@ -49,27 +49,27 @@
           <a href="/index.html" class="contact-back-link">&larr; Go back</a>
           <h1 class="contact-h1">Here to <span>help</span></h1>
           <form class="contact-form" action="https://formspree.io/f/moqgyaay" method="POST">
-            <label class="contact-label" for="fullname">Full name*</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name..." class="contact-input" />
+            <label class="contact-label" for="fullname">Full name* <span class="error-message">Please enter your full name</span></label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name..." class="contact-input" required />
             
-            <label class="contact-label" for="email">Email address*</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address..." class="contact-input" />
+            <label class="contact-label" for="email">Email address* <span class="error-message">Please enter a valid email address</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address..." class="contact-input" required />
+            
+            <label class="contact-label" for="message">Message* <span class="error-message">Please enter a message</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." class="contact-textarea" required></textarea>
             
             <label class="contact-label" for="contact">Contact number</label>
             <input type="text" id="contact" name="contact" placeholder="Enter your contact number..." class="contact-input" />
             
-            <label class="contact-label" for="message">Message*</label>
-            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." class="contact-textarea"></textarea>
-            
-            <button type="submit" class="contact-btn">Send message &rarr;</button>
+            <button type="submit" class="contact-send">Send message &rarr;</button>
+            <br>
+            <button type="reset" class="contact-clr">Clear</button>
           </form>
         </div>
         <div class="contact-right-panel">
-          <h2 class="contact-h2">Join our newsletter</h2>
+          <h2 class="contact-h2">Stay Brickin'!</h2>
           <p>
-            Add your details and you'll receive our quarterly email, including
-            what's happening with the wildlife, nature and communities around Lewa
-            House.
+            Join our newsletter to get the latest updates on new arrivals, promotions, and exclusive deals at The Brickyard!
           </p>
           <div class="contact-newsletter">
             <form action="https://formspree.io/f/moqgyaay" method="POST">

@@ -19,3 +19,4 @@ function togglemenu() {
     document.querySelector(".bar-middle").classList.remove("move");
     document.querySelector(".bar-bottom").classList.remove("move");
   });
+  

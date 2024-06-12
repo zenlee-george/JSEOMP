@@ -9,22 +9,31 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">The Brickyard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <div class="nav-container">
+          <div class="nav navOne">
+            <a href="/index.html" class="active" onclick="togglemenu()">Home</a>
+          </div>
+          <div class="nav navHome">
+            <a href="about.html" onclick="togglemenu()">About Us</a>
+          </div>
+          <div class="nav navProduct">
+            <a href="products.html" onclick="togglemenu()">Products</a>
+          </div>
+          <div class="nav navCart">
+            <a href="cart.html" onclick="togglemenu()">Checkout</a>
+          </div>
+          <div class="nav navContact">
+            <a href="contact.html" onclick="togglemenu()">Contact Us</a>
+          </div>
+          <div class="nav navAdmin">
+            <a href="admin.html" onclick="togglemenu()">Management</a>
+          </div>
+        </div>
+        <button onclick="togglemenu()" class="navbutton">
+          <span class="bar bar-top"></span><span class="bar bar-middle"></span
+          ><span class="bar bar-bottom"></span>
+        </button>
+      </header>
     <main>
         <h1>Admin Dashboard</h1>
         <p>Welcome to the admin dashboard!</p>
