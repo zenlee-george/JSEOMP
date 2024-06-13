@@ -1,3 +1,4 @@
+// Navbar
 function togglemenu() {
   document.querySelectorAll(".nav-container").forEach((item) => {
     item.classList.toggle("show-menu");

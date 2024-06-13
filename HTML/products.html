@@ -4,103 +4,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="/CSS/index.css" />
-    <title>The Brickyard Products</title>
-    <style>
-        body {
-            background-color: #ffd700;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/CSS/index.css" />
+<title>The Brickyard Products</title>
+<style>
+    body {
+        background-color: #ffd700;
+    }
+</style>
 </head>
 
 <body>
-    <header>
-        <header>
-            <div class="nav-container">
-                <div class="nav navOne">
-                    <a href="/index.html" class="active" onclick="togglemenu()">Home</a>
-                </div>
-                <div class="nav navHome">
-                    <a href="about.html" onclick="togglemenu()">About Us</a>
-                </div>
-                <div class="nav navProduct">
-                    <a href="products.html" onclick="togglemenu()">Products</a>
-                </div>
-                <div class="nav navCart">
-                    <a href="cart.html" onclick="togglemenu()">Checkout</a>
-                </div>
-                <div class="nav navContact">
-                    <a href="contact.html" onclick="togglemenu()">Contact Us</a>
-                </div>
-                <div class="nav navAdmin">
-                    <a href="admin.html" onclick="togglemenu()">Management</a>
-                </div>
-            </div>
-            <button onclick="togglemenu()" class="navbutton">
-                <span class="bar bar-top"></span><span class="bar bar-middle"></span><span
-                    class="bar bar-bottom"></span>
-            </button>
-        </header>
-        <section id="product-grid">
-            <h2>Explore Our Products</h2>
-            <div class="product-row">
-              <div class="product-card">
-                <img src="https://example.com/lego-product-1.jpg" alt="Lego Product 1">
-                <h3>Lego Creator Expert: Roller Coaster</h3>
-                <p>Build and ride the ultimate roller coaster with this Lego Creator Expert set!</p>
-                <span class="price">$199.99</span>
-                <button class="add-to-cart">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="https://example.com/lego-product-2.jpg" alt="Lego Product 2">
-                <h3>Lego Friends: Amusement Park Roller Coaster</h3>
-                <p>Join the fun at the amusement park with this Lego Friends roller coaster set!</p>
-                <span class="price">$49.99</span>
-                <button class="add-to-cart">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="https://example.com/lego-product-3.jpg" alt="Lego Product 3">
-                <h3>Lego Star Wars: Death Star</h3>
-                <p>Join the Rebel Alliance with this iconic Lego Star Wars Death Star set!</p>
-                <span class="price">$499.99</span>
-                <button class="add-to-cart">Add to Cart</button>
-              </div>
-            </div>
-            <div class="product-row">
-              <div class="product-card">
-                <img src="https://example.com/lego-product-4.jpg" alt="Lego Product 4">
-                <h3>Lego City: Fire Truck</h3>
-                <p>Save the day with this Lego City fire truck set!</p>
-                <span class="price">$29.99</span>
-                <button class="add-to-cart">Add to Cart</button>
-              </div>
-              <div class="product-card">
-                <img src="https://example.com/lego-product-5.jpg" alt="Lego Product 5">
-                <h3>Lego Star Wars: Millennium Falcon</h3>
-                <p>Join the Rebel Alliance with this iconic Lego Star Wars Millennium Falcon set!</p>
-                <span class="price">$149.99</span>
-                <button class="add-to-cart">Add to Cart</button>
-              </div>
-              <!-- more products here -->
-            </div>
-          </section>
+<header>
+    <div class="nav-container">
+        <div class="nav navOne">
+            <a href="/index.html" class="active" onclick="togglemenu()">Home</a>
+        </div>
+        <div class="nav navHome">
+            <a href="about.html" onclick="togglemenu()">About Us</a>
+        </div>
+        <div class="nav navProduct">
+            <a href="products.html" onclick="togglemenu()">Products</a>
+        </div>
+        <div class="nav navCart">
+            <a href="cart.html" onclick="togglemenu()">Checkout</a>
+        </div>
+        <div class="nav navContact">
+            <a href="contact.html" onclick="togglemenu()">Contact Us</a>
+        </div>
+        <div class="nav navAdmin">
+            <a href="admin.html" onclick="togglemenu()">Management</a>
+        </div>
+    </div>
+    <button onclick="togglemenu()" class="navbutton">
+        <span class="bar bar-top"></span><span class="bar bar-middle"></span><span
+            class="bar bar-bottom"></span>
+    </button>
+</header>
+<main class="product-grid">
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="The Brickyard Logo" />
-                </div>
-                <p>&copy; 2024 The Brickyard. All rights reserved.</p>
-            </div>
+</main>
+<footer class="footer">
+<div class="footer-content">
+    <div class="footer-logo">
+        <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="The Brickyard Logo" />
+    </div>
+    <p>&copy; 2024 The Brickyard. All rights reserved.</p>
+</div>
+</footer>
 
-            <script src="/Scripts/products.js"></script>
+<script src="/Scripts/products.js"></script>
 </body>
 
 </html>
