@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/cart.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>The Brickyard - Cart</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <title>The Brickyard Checkout</title>
+    <style>
+        body {
+            background-color: #ffd700;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,23 +35,26 @@
           <div class="nav navAdmin">
             <a href="admin.html" onclick="togglemenu()">Management</a>
           </div>
+          <button onclick="togglemenu()" class="navbutton">
+            <span class="bar bar-top"></span><span class="bar bar-middle"></span><span class="bar bar-bottom"></span>
+          </button>
         </div>
-        <button onclick="togglemenu()" class="navbutton">
-          <span class="bar bar-top"></span><span class="bar bar-middle"></span
-          ><span class="bar bar-bottom"></span>
-        </button>
-      </header>
+    </header>
     <main>
-        <h1>Shopping Cart</h1>
+        <h1>Checkout</h1>
         <ul id="cart-items">
         </ul>
-        <p id="cart-total">Total: $0.00</p>
+        <p id="cart-total">Total: R0.00</p>
         <button id="checkout">Checkout</button>
     </main>
     <footer class="footer">
-        <p>&copy; 2024 The Brickyard. All rights reserved.</p>
+      <div class="footer-content">
+          <div class="footer-logo">
+              <img src="https://zenlee-george.github.io/hostedimages/Logo.png" alt="The Brickyard Logo" />
+          </div>
+          <p>&copy; 2024 The Brickyard. All rights reserved.</p>
+      </div>
     </footer>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="/Scripts/cart.js"></script>
+    <script type="text/javascript" src="/Scripts/cart.js"></script>
 </body>
 </html>
