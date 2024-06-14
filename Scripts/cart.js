@@ -23,69 +23,86 @@ document.querySelector(".navbutton").addEventListener("mouseout", () => {
 
 // cart.js
 
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-// function to add item to cart
 function addItemToCart(item) {
-  cartItems.push(item);
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  updateCartTotal();
-}
-
-// function to remove item from cart
-function removeItemFromCart(index) {
-  cartItems.splice(index, 1);
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  const existingItem = cartItems.find((cartItem) => cartItem.name === item.name);
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cartItems.push({...item, quantity: 1 });
+  }
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
   updateCartTotal();
   displayCartItems();
 }
 
-// function to update cart total
-function updateCartTotal() {
-  let totalCost = 0;
-  cartItems.forEach(item => {
-    totalCost += item.price * item.quantity;
-  });
-  document.getElementById('cart-total').textContent = `Total: R ${totalCost.toFixed(2)}`;
+function removeOneItemFromCart(index) {
+  const itemToRemove = cartItems[index];
+  if (itemToRemove.quantity > 1) {
+    itemToRemove.quantity--;
+  } else {
+    cartItems.splice(index, 1);
+  }
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  updateCartTotal();
+  displayCartItems();
 }
 
-// function to display cart items
-function displayCartItems() {
-  let cartItemsHTML = '';
+function updateCartTotal() {
+  let totalCost = 0;
   cartItems.forEach((item) => {
+    totalCost += item.price * item.quantity;
+  });
+  document.getElementById("cart-total").textContent = `Total: R ${totalCost.toFixed(2)}`;
+}
+
+function displayCartItems() {
+  let cartItemsHTML = "";
+  cartItems.forEach((item, index) => {
     cartItemsHTML += `
       <li>
         <span>${item.name} x ${item.quantity}</span>
         <span>R ${item.price * item.quantity}</span>
-        <button onclick="removeItemFromCart(${cartItems.indexOf(item)})">Remove</button>
+        <button onclick="removeOneItemFromCart(${index})">Remove one</button>
       </li>
     `;
   });
-  document.getElementById('cart-items').innerHTML = cartItemsHTML;
+  document.getElementById("cart-items").innerHTML = cartItemsHTML;
 }
 
-// function to handle checkout
-function checkout() {
-  const checkoutContainer = document.getElementById('checkout-container');
-  checkoutContainer.innerHTML = `
-    <h2>Payment Options</h2>
-    <p>Choose a payment method:</p>
-    <ul>
-      <li>Credit Card</li>
-      <li>PayPal</li>
-      <li>Bank Transfer</li>
-    </ul>
-  `;
+function addItemToPurchasedItems(item) {
+  purchasedItems.push(item);
+  localStorage.setItem("purchasedItems", JSON.stringify(purchasedItems));
 }
 
-// load cart items from local storage
-cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+function displayPurchasedItems() {
+  let purchasedItemsHTML = "";
+  purchasedItems.forEach((item) => {
+    purchasedItemsHTML += `
+      <li>
+        <span>${item.name} x ${item.quantity}</span>
+        <span>R ${item.price * item.quantity}</span>
+      </li>
+    `;
+  });
+  document.getElementById("purchased-items").innerHTML = purchasedItemsHTML;
+}
 
-// display cart items
+function clearAllItems() {
+  const items = document.querySelectorAll(".checkout-items li");
+  items.forEach((item) => {
+    item.remove();
+  });
+  cartItems = [];
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  updateCartTotal();
+  displayCartItems();
+}
+
+document.getElementById("clear-button").addEventListener("click", clearAllItems);
+
+
 displayCartItems();
-
-// update cart total
 updateCartTotal();
-
-// add event listener to checkout button
-document.getElementById('checkout').addEventListener('click', checkout);
+displayPurchasedItems();
