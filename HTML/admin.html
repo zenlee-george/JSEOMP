@@ -1,52 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Brickyard - Admin</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/admin.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <title>The Brickyard Admin</title>
+    <style>
+      body {
+        background-color: #ffd700;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <div class="nav-container">
-          <div class="nav navOne">
-            <a href="/index.html" class="active" onclick="togglemenu()">Home</a>
-          </div>
-          <div class="nav navHome">
-            <a href="about.html" onclick="togglemenu()">About Us</a>
-          </div>
-          <div class="nav navProduct">
-            <a href="products.html" onclick="togglemenu()">Products</a>
-          </div>
-          <div class="nav navCart">
-            <a href="cart.html" onclick="togglemenu()">Checkout</a>
-          </div>
-          <div class="nav navContact">
-            <a href="contact.html" onclick="togglemenu()">Contact Us</a>
-          </div>
-          <div class="nav navAdmin">
-            <a href="admin.html" onclick="togglemenu()">Management</a>
-          </div>
+      <div class="nav-container">
+        <div class="nav navOne">
+          <a href="/index.html" class="active" onclick="togglemenu()">Home</a>
         </div>
-        <button onclick="togglemenu()" class="navbutton">
-          <span class="bar bar-top"></span><span class="bar bar-middle"></span
-          ><span class="bar bar-bottom"></span>
-        </button>
-      </header>
-    <main>
-        <h1>Admin Dashboard</h1>
-        <p>Welcome to the admin dashboard!</p>
-        <ul>
-            <li><a href="admin-products.html">Manage Products</a></li>
-            <li><a href="admin-orders.html">Manage Orders</a></li>
-            <li><a href="admin-users.html">Manage Users</a></li>
-        </ul>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2024 The Brickyard. All rights reserved.</p>
-    </footer>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <div class="nav navHome">
+          <a href="about.html" onclick="togglemenu()">About Us</a>
+        </div>
+        <div class="nav navProduct">
+          <a href="products.html" onclick="togglemenu()">Products</a>
+        </div>
+        <div class="nav navCart">
+          <a href="cart.html" onclick="togglemenu()">Checkout</a>
+        </div>
+        <div class="nav navContact">
+          <a href="contact.html" onclick="togglemenu()">Contact Us</a>
+        </div>
+        <div class="nav navAdmin">
+          <a href="admin.html" onclick="togglemenu()">Management</a>
+        </div>
+      </div>
+      <button onclick="togglemenu()" class="navbutton">
+        <span class="bar bar-top"></span><span class="bar bar-middle"></span
+        ><span class="bar bar-bottom"></span>
+      </button>
+    </header>
+      <main>
+        <section class="container">
+  
+          <div class="container">
+            <div class="row pt-4">
+  
+                <div class="col-12 d-flex justify-content-center pt-5 pb-4">
+  
+                    <h5 class="contact-text">Admin</h5>
+                </div>
+            </div>
+          </div>
+  
+          <div class="row admin-btn-row">
+            <div class="col d-flex justify-content-end">
+              <button class="btn btn-outline-success admin-btn ml-auto m-3" id="adminSortProduct">
+                <span class="text-light">Sort Items</span>
+              </button>
+              <button type="button" class="btn btn-outline-success admin-btn ml-auto m-3" data-bs-toggle="modal" data-bs-target="#adminAddProduct">
+                <span class="text-light">Add New Items</span>
+              </button>
+            </div>
+          </div>
+  
+          <div class="row">
+            
+            <!-- Admin Modal -->
+            <div class="modal fade" id="adminAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Add a New Item</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form">
+                      <div class="container">
+                        <input class="form-control m-2" type="text" placeholder="Enter item name" name="addName" id="addName" required>
+                        <input class="form-control m-2" type="text" placeholder="Enter item category" name="addCategory" id="addCategory" required >
+                        <input class="form-control m-2" type="text" placeholder="Enter item color" name="addColor" id="addColor" required >
+                        <textarea class="form-control m-2" placeholder="Enter item description" name="addDescription" id="addDescription" required></textarea>
+                        <input class="form-control m-2" type="number" placeholder="Enter item price" name="addPrice" id="addPrice" required >
+                        <input class="form-control m-2" type="url" placeholder="Enter image url" name="addImage" id="addImage" required >
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal"><span class="text-light">Close</span></button>
+                    <button type="button" class="btn btn-outline-success" id="saveProduct"><span class="text-light">Save Changes</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <table class="table-responsive table-bordered">
+              <thead class="table-group-divider">
+                <tr>
+                  <th>Image</th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Color</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider" id="table-products">
+                <!-- Table rows generated by JavaScript will be inserted here -->
+              </tbody>
+            </table>
+          </div>
+          
+        </section>
+      </main>
+  
+      <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> All Rights Reserved.</p>
+      </footer>  
     <script src="/Scripts/admin.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.querySelector('#currentYear').textContent = new Date().getFullYear()
+    </script>
 </body>
 </html>
