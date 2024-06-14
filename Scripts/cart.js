@@ -102,6 +102,17 @@ function clearAllItems() {
 
 document.getElementById("clear-button").addEventListener("click", clearAllItems);
 
+document.getElementById("clear-button").addEventListener("click", clearAllItems);
+
+document.getElementById("checkout-button").addEventListener("click", checkout);
+
+function checkout() {
+  if (confirm("Are you sure you want to complete your purchase?")) {
+    clearAllItems();
+    alert("Thank you for your purchase!");
+  }
+}
+
 
 displayCartItems();
 updateCartTotal();

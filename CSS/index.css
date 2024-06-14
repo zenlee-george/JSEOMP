@@ -1,8 +1,9 @@
 body {
   min-height: 100vh;
+  width: 190vh;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 1vh;
   padding: 0;
   height: 100vh;
   box-sizing: border-box;
@@ -328,6 +329,7 @@ body::-webkit-scrollbar {
 
 .btn-primary {
   font-family: "Montserrat Alternates", sans-serif;
+  text-decoration: none;
   background-color: #000;
   color: #fff;
   border: none;
@@ -774,12 +776,21 @@ body::-webkit-scrollbar {
   display: block;
 }
 
-/* Products */
+/* product */
+
 .product-grid {
-  font-family: "Montserrat Alternates", sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.product-grid h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+  text-shadow: 0 0 10px #ee4b2b;
+  text-decoration: underline wavy #000;
+  animation: zoom 2s infinite;
 }
 
 .product {
@@ -802,13 +813,14 @@ body::-webkit-scrollbar {
 }
 
 .product-info {
-  text-align: ce;
+  text-align: center;
   padding: 10px;
 }
 
 .product-name {
+  text-decoration: double underline;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -816,12 +828,14 @@ body::-webkit-scrollbar {
   display: none;
   padding: 10px;
   font-size: 16px;
+  font-weight: bold;
   color: #000;
 }
 
 .product-price {
   font-size: 16px;
-  color: #666;
+  font-weight: bold;
+  color: #000;
 }
 
 .button {
@@ -833,6 +847,7 @@ body::-webkit-scrollbar {
   font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .button:hover {
@@ -849,36 +864,76 @@ body::-webkit-scrollbar {
   background-color: #ff4777;
 }
 
-.sort-container {
-  margin-top: 20px;
-  text-align: right;
-}
-
-.sort-options {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.sort-and-filter {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.sort-options li {
-  margin-right: 20px;
+.sort-and-filter h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.sort-options a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.2s ease;
-}
-
-.sort-options a:hover {
+.sort-and-filter h2 span {
+  font-size: 18px;
+  font-weight: 400;
   color: #666;
 }
 
-.sort-options a.active {
+.sort-btn {
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-image: linear-gradient(to right, #007bff, #ffce00, #ee4b2b);
+  background-size: 200px 100%;
+  background-position: 0% 100%;
+  animation: bounce 2s ease-in-out infinite;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
   font-weight: bold;
-  color: #999;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: block; 
+  margin: 0 auto; 
+  text-align: center; 
+  margin-top: 10px;
+}
+
+.sort-btn:hover {
+  background-position: 100% 100%;
+}
+
+.category-filter {
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-image: linear-gradient(to right, #007bff, #ffce00, #ee4b2b);
+  background-size: 200px 100%;
+  background-position: 0% 100%;
+  animation: bounce 2s ease-in-out infinite;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: block; 
+  margin: 0 auto; 
+  text-align: center; 
+  margin-top: 10px;
+}
+
+.category-filter:hover {
+  background-position: 100% 100%;
 }
 
 /* Checkout */
@@ -1021,7 +1076,48 @@ body::-webkit-scrollbar {
   }
 }
 
+/* cartBtn */
+.cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.cart-button button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.cart-button button:hover {
+  background-color: #444;
+}
+
+.cart-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.cart-count {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
 /* Footer */
+
+footer.footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
 
 footer {
     position: sticky fixed;
@@ -1055,4 +1151,8 @@ footer {
 
 .footer-content > *:not(.footer-logo) {
   margin: 0 auto;
+}
+
+.foot p {
+  margin-bottom: 0;
 }
